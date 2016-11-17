@@ -1,0 +1,29 @@
+{
+  "name": "wa11y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "bin": {
+    "wa11y": "./bin/wa11y"
+  },
+  "scripts": {
+    "postinstall": "selenium-standalone install",
+    "test": "bin/wa11y http://www.google.com --verbose --ignore=notice",
+    "sauce": "bin/wa11y http://www.google.com --sauce --tunnel --verbose"
+  },
+  "author": "Chi Ahrens (cahrens@wwalmartlabs.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cahrens/wa11y.git"
+  },
+  "homepage": "https://github.com/cahrens/wa11y",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.1.2",
+    "chromedriver": "^2.24.1",
+    "sauce-connect-launcher": "^0.17.0",
+    "selenium-standalone": "^5.7.2",
+    "webdriverio": "^4.2.16",
+    "yargs": "^6.3.0"
+  }
+}

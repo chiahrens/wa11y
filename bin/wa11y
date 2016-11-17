@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+'use strict';
+
+var wa11y = require('../lib/index');
+var argv = require('yargs').argv;
+
+
+if(process.argv.length < 3){
+    return console.log('Usage: wa11y <url> <options>');
+}
+
+wa11y.scan(process.argv[2], argv, function(err, result){
+    if(err){
+        return console.log(err);
+    }
+    console.log(result);
+});
